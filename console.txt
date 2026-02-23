@@ -1,0 +1,20 @@
+
+> visteon@0.0.0 dev
+> vite
+
+
+  VITE v6.0.11  ready in 613 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
+> visteon@0.0.0 dev
+> vite
+
+
+  VITE v6.0.11  ready in 387 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
