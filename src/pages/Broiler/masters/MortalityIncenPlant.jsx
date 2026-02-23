@@ -125,11 +125,11 @@ const MortalityIncenPlant = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">werks</th>
-                                <th className="p-4 text-center text-sm text-black">zzfrmoFcr</th>
-                                <th className="p-4 text-center text-sm text-black">zztoFcr</th>
-                                <th className="p-4 text-center text-sm text-black">amount</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Plant</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in document currency</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in document currency</th>
+                                <th className="p-4 text-center text-sm text-black">Amount</th>
                                 {/* Removed: Actions column header */}
                             </tr>
                         </thead>
@@ -140,8 +140,8 @@ const MortalityIncenPlant = () => {
                                         <td className="p-4 text-sm opacity-65">{index + startIndex + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
                                         <td className="p-4 text-sm opacity-65">{item.werks}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zzfrmoFcr}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zztoFcr}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zzfrmo_Fcr}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zzto_Fcr}</td>
                                         <td className="p-4 text-sm opacity-65">{item.amount}</td>
                                         {/* Removed: Actions cell content */}
                                     </tr>

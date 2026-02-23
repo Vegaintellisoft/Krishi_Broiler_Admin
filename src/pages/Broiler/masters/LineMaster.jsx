@@ -48,7 +48,7 @@ const LineMaster = () => {
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.werks.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.zzline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zzlineN.toLowerCase().includes(searchQuery.toLowerCase())
+            item.zzline_N.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained
@@ -125,10 +125,10 @@ const LineMaster = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">Werks</th>
-                                <th className="p-4 text-center text-sm text-black">zzline</th>
-                                <th className="p-4 text-center text-sm text-black">zzlineN</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Plant</th>
+                                <th className="p-4 text-center text-sm text-black">Line No</th>
+                                <th className="p-4 text-center text-sm text-black">Line Name</th>
                                 {/* Removed: Actions column header */}
                             </tr>
                         </thead>
@@ -140,7 +140,7 @@ const LineMaster = () => {
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
                                         <td className="p-4 text-sm opacity-65">{item.werks}</td>
                                         <td className="p-4 text-sm opacity-65"> {item.zzline} </td>
-                                        <td className="p-4 text-sm opacity-65"> {item.zzlineN} </td>
+                                        <td className="p-4 text-sm opacity-65"> {item.zzline_N} </td>
                                         {/* Removed: Actions cell content */}
                                     </tr>
                                 ))

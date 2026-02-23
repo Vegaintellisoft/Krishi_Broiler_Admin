@@ -46,8 +46,8 @@ const ShedCapacity = () => {
     const filteredData = data.filter(
         (item) =>
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zzfarmSt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zperShed.toLowerCase().includes(searchQuery.toLowerCase())
+            item.zzfarm_St.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.zper_Shed.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained
@@ -124,9 +124,9 @@ const ShedCapacity = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">zzfarmSt</th>
-                                <th className="p-4 text-center text-sm text-black">zperShed</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Shed Capacity</th>
+                                <th className="p-4 text-center text-sm text-black">Capacity</th>
                                 {/* Removed: Actions column header */}
                             </tr>
                         </thead>
@@ -136,8 +136,8 @@ const ShedCapacity = () => {
                                     <tr key={item.id} className="hover:bg-gray-50 text-center">
                                         <td className="p-4 text-sm opacity-65">{index + startIndex + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zzfarmSt}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zperShed}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zzfarm_St}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zper_Shed}</td>
                                         {/* Removed: Actions cell content */}
                                     </tr>
                                 ))

@@ -23,7 +23,7 @@ const MortalityReason = () => {
     const fetchMaster = async () => {
         setIsLoading(true);
         try {
-            const { data } = await axios.get("broiler/master/mortality-reason");
+            const { data } = await axios.get("broiler/master/getAll/broiler_mortality_reason");
             setData(data.data || []);
         } catch (error) {
             console.error("Error fetching mortality reason:", error);
@@ -38,8 +38,8 @@ const MortalityReason = () => {
         const q = searchQuery.toLowerCase();
         return (
             (item.mandt || "").toString().toLowerCase().includes(q) ||
-            (item.rsCode || "").toString().toLowerCase().includes(q) ||
-            (item.rsTxt || "").toString().toLowerCase().includes(q)
+            (item.rs_Code || "").toString().toLowerCase().includes(q) ||
+            (item.rs_Txt || "").toString().toLowerCase().includes(q)
         );
     });
 
@@ -114,9 +114,9 @@ const MortalityReason = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">rsCode</th>
-                                <th className="p-4 text-center text-sm text-black">rsTxt</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Reason Code</th>
+                                <th className="p-4 text-center text-sm text-black">Reason Description</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y font-poppins capitalize">
@@ -125,8 +125,8 @@ const MortalityReason = () => {
                                     <tr key={item.id || index} className="hover:bg-gray-50 text-center">
                                         <td className="p-4 text-sm opacity-65">{startIndex + index + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.rsCode}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.rsTxt}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.rs_Code}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.rs_Txt}</td>
                                     </tr>
                                 ))
                             ) : (

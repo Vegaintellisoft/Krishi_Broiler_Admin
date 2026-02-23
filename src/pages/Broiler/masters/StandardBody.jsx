@@ -23,7 +23,7 @@ const StandardBody = () => {
     const fetchMaster = async () => {
         setIsLoading(true);
         try {
-            const { data } = await axios.get("broiler/master/standard-body");
+            const { data } = await axios.get("broiler/master/getAll/standard_body_master");
             setData(data.data || []);
         } catch (err) {
             console.log("Error fetching Standard body:", err);
@@ -42,9 +42,9 @@ const StandardBody = () => {
     const filteredData = data.filter(
         (item) =>
             (item.mandt || "").toString().toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (item.zzAge || "").toString().toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (item.zstdBw || "").toString().toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (item.zsfiKg || "").toString().toLowerCase().includes(searchQuery.toLowerCase())
+            (item.zz_Age || "").toString().toLowerCase().includes(searchQuery.toLowerCase()) ||
+            (item.zstd_Bw || "").toString().toLowerCase().includes(searchQuery.toLowerCase()) ||
+            (item.zsfi_Kg || "").toString().toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     const totalPages = Math.ceil(filteredData.length / itemsPerPage);
@@ -115,10 +115,10 @@ const StandardBody = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">zzAge</th>
-                                <th className="p-4 text-center text-sm text-black">zstdBw</th>
-                                <th className="p-4 text-center text-sm text-black">zsfiKg</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Age</th>
+                                <th className="p-4 text-center text-sm text-black">Quantity</th>
+                                <th className="p-4 text-center text-sm text-black">KG Quantity</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y font-poppins capitalize">
@@ -127,9 +127,9 @@ const StandardBody = () => {
                                     <tr key={item.id || index} className="hover:bg-gray-50 text-center">
                                         <td className="p-4 text-sm opacity-65">{index + startIndex + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zzAge}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zstdBw}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zsfiKg}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zz_Age}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zstd_Bw}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zsfi_Kg}</td>
                                     </tr>
                                 ))
                             ) : (

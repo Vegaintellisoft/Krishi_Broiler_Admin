@@ -43,10 +43,10 @@ const HetcheryMachine = () => {
     const filteredData = data.filter(
         (item) =>
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zzbroMac.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zzbroMacN.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.zzbro_Mac.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.zzbro_Mac_N.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.zzcapacity.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zsetQty.toLowerCase().includes(searchQuery.toLowerCase())
+            item.zset_Qty.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained
@@ -126,11 +126,11 @@ const HetcheryMachine = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">zzbroMac</th>
-                                <th className="p-4 text-center text-sm text-black">zzbroMacN</th>
-                                <th className="p-4 text-center text-sm text-black">zzcapacity</th>
-                                <th className="p-4 text-center text-sm text-black">zsetQty</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Machine Code</th>
+                                <th className="p-4 text-center text-sm text-black">Machine Name</th>
+                                <th className="p-4 text-center text-sm text-black">Capacity</th>
+                                <th className="p-4 text-center text-sm text-black">Available Capacity</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y font-poppins capitalize">
@@ -139,10 +139,10 @@ const HetcheryMachine = () => {
                                     <tr key={item.id} className="hover:bg-gray-50 text-center">
                                         <td className="p-4 text-sm opacity-65">{index + startIndex + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zzbroMac}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zzbroMacN}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zzbro_Mac}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zzbro_Mac_N}</td>
                                         <td className="p-4 text-sm opacity-65">{item.zzcapacity}</td>
-                                        <td className="p-4 text-sm opacity-65"> {item.zsetQty} </td>
+                                        <td className="p-4 text-sm opacity-65"> {item.zset_Qty} </td>
                                     </tr>
                                 ))
                             ) : (

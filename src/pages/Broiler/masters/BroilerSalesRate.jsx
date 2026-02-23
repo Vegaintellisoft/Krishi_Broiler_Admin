@@ -45,7 +45,7 @@ const BroilerSalesRate = () => {
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.werks.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.rate.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.allPer.toLowerCase().includes(searchQuery.toLowerCase())
+            item.all_Per.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained
@@ -125,10 +125,10 @@ const BroilerSalesRate = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">Werks</th>
-                                <th className="p-4 text-center text-sm text-black">rate</th>
-                                <th className="p-4 text-center text-sm text-black">allPer</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Plant</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in document currency</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in document currency</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y font-poppins capitalize">
@@ -139,7 +139,7 @@ const BroilerSalesRate = () => {
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
                                         <td className="p-4 text-sm opacity-65">{item.werks}</td>
                                         <td className="p-4 text-sm opacity-65">{item.rate}</td>
-                                        <td className="p-4 text-sm opacity-65"> {item.allPer} </td>
+                                        <td className="p-4 text-sm opacity-65"> {item.all_Per} </td>
                                     </tr>
                                 ))
                             ) : (

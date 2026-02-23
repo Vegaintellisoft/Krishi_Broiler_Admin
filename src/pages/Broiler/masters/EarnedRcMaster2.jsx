@@ -22,7 +22,7 @@ const EarnedRcMaster2 = () => {
     const fetchMaster = async () => {
         setIsLoading(true);
         try {
-            const { data } = await axios.get("broiler/master/earned-rc2");
+            const { data } = await axios.get("broiler/master/getAll/earned_rc_master2");
             setData(data.data || []);
         } catch (error) {
             console.error("Error fetching Earned RC Master-2:", error);
@@ -44,7 +44,7 @@ const EarnedRcMaster2 = () => {
             (item.werks || "").toString().toLowerCase().includes(q) ||
             (item.zsel || "").toString().toLowerCase().includes(q) ||
             (item.zerc || "").toString().toLowerCase().includes(q) ||
-            (item.znewGc || "").toString().toLowerCase().includes(q)
+            (item.znew_Gc || "").toString().toLowerCase().includes(q)
         );
     });
 
@@ -114,11 +114,11 @@ const EarnedRcMaster2 = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">werks</th>
-                                <th className="p-4 text-center text-sm text-black">zsel</th>
-                                <th className="p-4 text-center text-sm text-black">zerc</th>
-                                <th className="p-4 text-center text-sm text-black">znewGc</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Plant</th>
+                                <th className="p-4 text-center text-sm text-black">DB Field Name</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in document currency</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in document currency</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y font-poppins capitalize">
@@ -130,7 +130,7 @@ const EarnedRcMaster2 = () => {
                                         <td className="p-4 text-sm opacity-65">{item.werks}</td>
                                         <td className="p-4 text-sm opacity-65">{item.zsel}</td>
                                         <td className="p-4 text-sm opacity-65">{item.zerc}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.znewGc}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.znew_Gc}</td>
                                     </tr>
                                 ))
                             ) : (

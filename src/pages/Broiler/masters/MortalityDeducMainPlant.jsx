@@ -47,7 +47,7 @@ const MortalityDeducMainPlant = () => {
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.werks.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.wrbtr.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.wrbtrP.toLowerCase().includes(searchQuery.toLowerCase())
+            item.wrbtr_P.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained
@@ -118,10 +118,10 @@ const MortalityDeducMainPlant = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">werks</th>
-                                <th className="p-4 text-center text-sm text-black">wrbtr</th>
-                                <th className="p-4 text-center text-sm text-black">wrbtrP</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Plant</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in document currency</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in document currency</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y font-poppins capitalize">
@@ -132,7 +132,7 @@ const MortalityDeducMainPlant = () => {
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
                                         <td className="p-4 text-sm opacity-65">{item.werks}</td>
                                         <td className="p-4 text-sm opacity-65">{item.wrbtr}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.wrbtrP}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.wrbtr_P}</td>
                                     </tr>
                                 ))
                             ) : (
