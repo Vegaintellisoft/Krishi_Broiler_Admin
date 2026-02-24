@@ -129,7 +129,7 @@ const MortalityDeducPlant = () => {
                                 <th className="p-4 text-center text-sm text-black">Plant</th>
                                 <th className="p-4 text-center text-sm text-black">Amount in document currency</th>
                                 <th className="p-4 text-center text-sm text-black">Amount in document currency</th>
-                                <th className="p-4 text-center text-sm text-black">Amount</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in document currency</th>
                                 {/* Removed: Actions column header */}
                             </tr>
                         </thead>

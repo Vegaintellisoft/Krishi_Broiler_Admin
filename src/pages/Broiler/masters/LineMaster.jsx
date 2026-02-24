@@ -48,7 +48,7 @@ const LineMaster = () => {
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.werks.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.zzline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zzline_N.toLowerCase().includes(searchQuery.toLowerCase())
+            item.zzlineN.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained
@@ -140,7 +140,7 @@ const LineMaster = () => {
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
                                         <td className="p-4 text-sm opacity-65">{item.werks}</td>
                                         <td className="p-4 text-sm opacity-65"> {item.zzline} </td>
-                                        <td className="p-4 text-sm opacity-65"> {item.zzline_N} </td>
+                                        <td className="p-4 text-sm opacity-65"> {item.zzlineN} </td>
                                         {/* Removed: Actions cell content */}
                                     </tr>
                                 ))

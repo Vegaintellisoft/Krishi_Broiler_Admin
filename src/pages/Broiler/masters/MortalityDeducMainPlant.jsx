@@ -47,7 +47,7 @@ const MortalityDeducMainPlant = () => {
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.werks.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.wrbtr.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.wrbtr_P.toLowerCase().includes(searchQuery.toLowerCase())
+            item.wrbtrP.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained
@@ -132,7 +132,7 @@ const MortalityDeducMainPlant = () => {
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
                                         <td className="p-4 text-sm opacity-65">{item.werks}</td>
                                         <td className="p-4 text-sm opacity-65">{item.wrbtr}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.wrbtr_P}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.wrbtrP}</td>
                                     </tr>
                                 ))
                             ) : (

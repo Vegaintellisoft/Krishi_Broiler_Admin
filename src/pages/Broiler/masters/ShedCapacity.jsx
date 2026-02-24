@@ -125,6 +125,7 @@ const ShedCapacity = () => {
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
                                 <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Plant</th>
                                 <th className="p-4 text-center text-sm text-black">Shed Capacity</th>
                                 <th className="p-4 text-center text-sm text-black">Capacity</th>
                                 {/* Removed: Actions column header */}
@@ -136,8 +137,9 @@ const ShedCapacity = () => {
                                     <tr key={item.id} className="hover:bg-gray-50 text-center">
                                         <td className="p-4 text-sm opacity-65">{index + startIndex + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zzfarm_St}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zper_Shed}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.werks}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zzfarmSt}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zperShed}</td>
                                         {/* Removed: Actions cell content */}
                                     </tr>
                                 ))

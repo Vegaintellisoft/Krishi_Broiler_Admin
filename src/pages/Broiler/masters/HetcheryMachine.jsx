@@ -43,10 +43,10 @@ const HetcheryMachine = () => {
     const filteredData = data.filter(
         (item) =>
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zzbro_Mac.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zzbro_Mac_N.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.zzbroMac.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.zzbroMacN.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.zzcapacity.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zset_Qty.toLowerCase().includes(searchQuery.toLowerCase())
+            item.zsetQty.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained
@@ -139,10 +139,10 @@ const HetcheryMachine = () => {
                                     <tr key={item.id} className="hover:bg-gray-50 text-center">
                                         <td className="p-4 text-sm opacity-65">{index + startIndex + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zzbro_Mac}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zzbro_Mac_N}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zzbroMac}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zzbroMacN}</td>
                                         <td className="p-4 text-sm opacity-65">{item.zzcapacity}</td>
-                                        <td className="p-4 text-sm opacity-65"> {item.zset_Qty} </td>
+                                        <td className="p-4 text-sm opacity-65"> {item.zsetQty} </td>
                                     </tr>
                                 ))
                             ) : (

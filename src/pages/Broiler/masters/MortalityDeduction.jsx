@@ -45,8 +45,8 @@ const MortalityDeduction = () => {
     const filteredData = data.filter(
         (item) =>
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zzfrmo_Fcr.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zzto_Fcr.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.zzfrmoFcr.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.zztoFcr.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.amount.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
@@ -127,7 +127,7 @@ const MortalityDeduction = () => {
                                 <th className="p-4 text-center text-sm text-black">Client</th>
                                 <th className="p-4 text-center text-sm text-black">Amount in Document Currency</th>
                                 <th className="p-4 text-center text-sm text-black">Amount in Document Currency</th>
-                                <th className="p-4 text-center text-sm text-black">amount</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in Document Currency</th>
                                 {/* Removed: Actions column header */}
                             </tr>
                         </thead>
@@ -137,8 +137,8 @@ const MortalityDeduction = () => {
                                     <tr key={item.id} className="hover:bg-gray-50 text-center">
                                         <td className="p-4 text-sm opacity-65">{index + startIndex + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zzfrmo_Fcr}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zzto_Fcr}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zzfrmoFcr}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zztoFcr}</td>
                                         <td className="p-4 text-sm opacity-65">{item.amount}</td>
                                         {/* Removed: Actions cell content */}
                                     </tr>

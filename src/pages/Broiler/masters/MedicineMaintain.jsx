@@ -46,7 +46,7 @@ const MedicineMaintain = () => {
         (item) =>
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.wrbtr.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.wrbtr_P.toLowerCase().includes(searchQuery.toLowerCase())
+            item.wrbtrP.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained
@@ -136,7 +136,7 @@ const MedicineMaintain = () => {
                                         <td className="p-4 text-sm opacity-65">{index + startIndex + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
                                         <td className="p-4 text-sm opacity-65">{item.wrbtr}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.wrbtr_P}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.wrbtrP}</td>
                                         {/* Removed: Actions cell content */}
                                     </tr>
                                 ))

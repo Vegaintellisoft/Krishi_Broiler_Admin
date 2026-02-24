@@ -46,9 +46,9 @@ const RejectionReason = () => {
     const filteredData = data.filter(
         (item) =>
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.rs_Type.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.rs_Code.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.rs_Txt.toLowerCase().includes(searchQuery.toLowerCase())
+            item.rsType.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.rsCode.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.rsTxt.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained
@@ -137,9 +137,9 @@ const RejectionReason = () => {
                                     <tr key={item.id} className="hover:bg-gray-50 text-center">
                                         <td className="p-4 text-sm opacity-65">{index + startIndex + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.rs_Type}</td>
-                                        <td className="p-4 text-sm opacity-65"> {item.rs_Code} </td>
-                                        <td className="p-4 text-sm opacity-65"> {item.rs_Txt} </td>
+                                        <td className="p-4 text-sm opacity-65">{item.rsType}</td>
+                                        <td className="p-4 text-sm opacity-65"> {item.rsCode} </td>
+                                        <td className="p-4 text-sm opacity-65"> {item.rsTxt} </td>
                                         {/* Removed: Actions cell content */}
                                     </tr>
                                 ))

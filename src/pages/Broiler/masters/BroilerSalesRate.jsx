@@ -45,7 +45,7 @@ const BroilerSalesRate = () => {
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.werks.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.rate.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.all_Per.toLowerCase().includes(searchQuery.toLowerCase())
+            item.allPer.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained
@@ -139,7 +139,7 @@ const BroilerSalesRate = () => {
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
                                         <td className="p-4 text-sm opacity-65">{item.werks}</td>
                                         <td className="p-4 text-sm opacity-65">{item.rate}</td>
-                                        <td className="p-4 text-sm opacity-65"> {item.all_Per} </td>
+                                        <td className="p-4 text-sm opacity-65"> {item.allPer} </td>
                                     </tr>
                                 ))
                             ) : (

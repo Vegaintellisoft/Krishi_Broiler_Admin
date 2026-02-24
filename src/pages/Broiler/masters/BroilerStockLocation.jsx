@@ -46,8 +46,8 @@ const BroilerStockLocation = () => {
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.werks.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.lifnr.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.w_Name1.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.l_Name1.toLowerCase().includes(searchQuery.toLowerCase())
+            item.wName1.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.lName1.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained
@@ -140,8 +140,8 @@ const BroilerStockLocation = () => {
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
                                         <td className="p-4 text-sm opacity-65">{item.werks}</td>
                                         <td className="p-4 text-sm opacity-65"> {item.lifnr} </td>
-                                        <td className="p-4 text-sm opacity-65">{item.w_Name1}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.l_Name1} </td>
+                                        <td className="p-4 text-sm opacity-65">{item.wName1}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.lName1} </td>
                                         {/* Removed: Status cell and Action buttons cell */}
                                     </tr>
                                 ))

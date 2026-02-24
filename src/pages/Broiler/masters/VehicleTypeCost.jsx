@@ -45,8 +45,8 @@ const VehicleTypeCost = () => {
     const filteredData = data.filter(
         (item) =>
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zveh_Styp.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.tra_Cost.toLowerCase().includes(searchQuery.toLowerCase())
+            item.zvehStyp.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.traCost.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained
@@ -135,8 +135,8 @@ const VehicleTypeCost = () => {
                                     <tr key={item.id} className="hover:bg-gray-50 text-center">
                                         <td className="p-4 text-sm opacity-65">{index + startIndex + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zveh_Styp}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.tra_Cost}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zvehStyp}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.traCost}</td>
                                         {/* Removed: Actions cell content */}
                                     </tr>
                                 ))

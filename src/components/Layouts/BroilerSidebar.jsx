@@ -53,7 +53,7 @@ const BroilerSidebar = () => {
         { path: "/broilerShedIncentive", label: "Broiler Shed Incentive Details", show: broilerShedIncentive?.show },
         { path: "/mortalityIncenPlant", label: "Mortality Incentive Plant", show: mortalityIncenPlant?.show },
         { path: "/mortalityDeducPlant", label: "Mortality Deduction Plant", show: mortalityDeducPlant?.show },
-        { path: "/mortalityDeducPlant1", label: "Mortality Deduction Plant-1", show: mortalityDeducPlant1?.show },
+        //{ path: "/mortalityDeducPlant1", label: "Mortality Deduction Plant-1", show: mortalityDeducPlant1?.show },
         { path: "/mortalityDeducMainPlant", label: "Mortality Deduction Maintain Plant", show: mortalityDeducMainPlant?.show },
         { path: "/earnedRcMaster2", label: "Earned RC Master-2", show: earnedRcMaster2?.show },
         { path: "/earnedRcMaster3", label: "Earned RC Master-3", show: earnedRcMaster3?.show },

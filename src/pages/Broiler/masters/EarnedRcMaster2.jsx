@@ -44,7 +44,7 @@ const EarnedRcMaster2 = () => {
             (item.werks || "").toString().toLowerCase().includes(q) ||
             (item.zsel || "").toString().toLowerCase().includes(q) ||
             (item.zerc || "").toString().toLowerCase().includes(q) ||
-            (item.znew_Gc || "").toString().toLowerCase().includes(q)
+            (item.znewGc || "").toString().toLowerCase().includes(q)
         );
     });
 
@@ -130,7 +130,7 @@ const EarnedRcMaster2 = () => {
                                         <td className="p-4 text-sm opacity-65">{item.werks}</td>
                                         <td className="p-4 text-sm opacity-65">{item.zsel}</td>
                                         <td className="p-4 text-sm opacity-65">{item.zerc}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.znew_Gc}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.znewGc}</td>
                                     </tr>
                                 ))
                             ) : (

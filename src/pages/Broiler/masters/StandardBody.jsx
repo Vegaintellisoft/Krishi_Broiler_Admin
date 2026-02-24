@@ -42,9 +42,9 @@ const StandardBody = () => {
     const filteredData = data.filter(
         (item) =>
             (item.mandt || "").toString().toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (item.zz_Age || "").toString().toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (item.zstd_Bw || "").toString().toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (item.zsfi_Kg || "").toString().toLowerCase().includes(searchQuery.toLowerCase())
+            (item.zzAge || "").toString().toLowerCase().includes(searchQuery.toLowerCase()) ||
+            (item.zstdBw || "").toString().toLowerCase().includes(searchQuery.toLowerCase()) ||
+            (item.zsfiKg || "").toString().toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     const totalPages = Math.ceil(filteredData.length / itemsPerPage);
@@ -127,9 +127,9 @@ const StandardBody = () => {
                                     <tr key={item.id || index} className="hover:bg-gray-50 text-center">
                                         <td className="p-4 text-sm opacity-65">{index + startIndex + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zz_Age}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zstd_Bw}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.zsfi_Kg}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zzAge}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zstdBw}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.zsfiKg}</td>
                                     </tr>
                                 ))
                             ) : (

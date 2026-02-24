@@ -38,8 +38,8 @@ const MortalityReason = () => {
         const q = searchQuery.toLowerCase();
         return (
             (item.mandt || "").toString().toLowerCase().includes(q) ||
-            (item.rs_Code || "").toString().toLowerCase().includes(q) ||
-            (item.rs_Txt || "").toString().toLowerCase().includes(q)
+            (item.rsCode || "").toString().toLowerCase().includes(q) ||
+            (item.rsTxt || "").toString().toLowerCase().includes(q)
         );
     });
 
@@ -125,8 +125,8 @@ const MortalityReason = () => {
                                     <tr key={item.id || index} className="hover:bg-gray-50 text-center">
                                         <td className="p-4 text-sm opacity-65">{startIndex + index + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.rs_Code}</td>
-                                        <td className="p-4 text-sm opacity-65">{item.rs_Txt}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.rsCode}</td>
+                                        <td className="p-4 text-sm opacity-65">{item.rsTxt}</td>
                                     </tr>
                                 ))
                             ) : (

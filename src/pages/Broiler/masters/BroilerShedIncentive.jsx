@@ -46,7 +46,7 @@ const BroilerShedIncentive = () => {
             item.werks.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.begda.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.endda.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.shed_Inc.toLowerCase().includes(searchQuery.toLowerCase())
+            item.shedInc.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained

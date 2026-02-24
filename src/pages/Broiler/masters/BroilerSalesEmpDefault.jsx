@@ -44,8 +44,8 @@ const BroilerSalesEmpDefault = () => {
         (item) =>
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.werks.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zzorder_By.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.zzdisp_By.toLowerCase().includes(searchQuery.toLowerCase())
+            item.zzorderBy.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.zzdispBy.toLowerCase().includes(searchQuery.toLowerCase())
 
     );
 
@@ -140,8 +140,8 @@ const BroilerSalesEmpDefault = () => {
                                         <td className="p-4 text-sm opacity-65">{index + startIndex + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
                                         <td className="p-4 text-sm opacity-65">{item.werks}</td>
-                                        <td className="p-4 text-sm opacity-65"> {item.zzorder_By} </td>
-                                        <td className="p-4 text-sm opacity-65"> {item.zzdisp_By} </td>
+                                        <td className="p-4 text-sm opacity-65"> {item.zzorderBy} </td>
+                                        <td className="p-4 text-sm opacity-65"> {item.zzdispBy} </td>
 
                                     </tr>
                                 ))
