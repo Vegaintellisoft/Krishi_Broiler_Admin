@@ -124,11 +124,11 @@ const BroilerStockLocation = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">Werks</th>
-                                <th className="p-4 text-center text-sm text-black">Lifnr</th>
-                                <th className="p-4 text-center text-sm text-black">wName1</th>
-                                <th className="p-4 text-center text-sm text-black">lName1</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Plant</th>
+                                <th className="p-4 text-center text-sm text-black">Account Number of Supplier</th>
+                                <th className="p-4 text-center text-sm text-black">Plant Name</th>
+                                <th className="p-4 text-center text-sm text-black">Farmer Name</th>
                                 {/* Removed: Status and Actions columns */}
                             </tr>
                         </thead>

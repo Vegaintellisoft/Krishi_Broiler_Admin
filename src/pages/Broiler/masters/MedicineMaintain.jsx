@@ -123,9 +123,9 @@ const MedicineMaintain = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">wrbtr</th>
-                                <th className="p-4 text-center text-sm text-black">wrbtrP</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in Document Currency</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in Document Currency</th>
                                 {/* Removed: Actions column header */}
                             </tr>
                         </thead>

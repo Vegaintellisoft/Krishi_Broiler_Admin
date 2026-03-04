@@ -48,7 +48,7 @@ const RejectionReason = () => {
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.rsType.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.rsCode.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            item.rsCode.toLowerCase().includes(searchQuery.toLowerCase())
+            item.rsTxt.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     // Pagination logic is retained
@@ -124,10 +124,10 @@ const RejectionReason = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">mandt</th>
-                                <th className="p-4 text-center text-sm text-black">rsType</th>
-                                <th className="p-4 text-center text-sm text-black">rsCode</th>
-                                <th className="p-4 text-center text-sm text-black">rsTxt</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Reason Type</th>
+                                <th className="p-4 text-center text-sm text-black">Reason Code</th>
+                                <th className="p-4 text-center text-sm text-black">Reason Description</th>
                                 {/* Removed: Actions column header */}
                             </tr>
                         </thead>

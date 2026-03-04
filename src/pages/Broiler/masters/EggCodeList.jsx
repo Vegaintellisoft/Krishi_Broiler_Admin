@@ -22,7 +22,7 @@ const EggCodeList = () => {
     const fetchMaster = async () => {
         setIsLoading(true);
         try {
-            const { data } = await axios.get("broiler/master/egg-code-list");
+            const { data } = await axios.get("broiler/master/getAll/egg_code_list");
             setData(data.data || []);
         } catch (error) {
             console.error("Error fetching Egg Code List:", error);
@@ -112,9 +112,9 @@ const EggCodeList = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">matnr</th>
-                                <th className="p-4 text-center text-sm text-black">maktx</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Material Number</th>
+                                <th className="p-4 text-center text-sm text-black">Material Description</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y font-poppins capitalize">

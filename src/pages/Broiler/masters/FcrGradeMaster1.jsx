@@ -22,7 +22,7 @@ const FcrGradeMaster1 = () => {
     const fetchMaster = async () => {
         setIsLoading(true);
         try {
-            const { data } = await axios.get("broiler/master/fcr-grade1");
+            const { data } = await axios.get("broiler/master/getAll/fcr_grade_master1");
             setData(data.data || []);
         } catch (err) {
             console.error("Error fetching FCR Grade Master 1:", err);
@@ -116,8 +116,8 @@ const FcrGradeMaster1 = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">zerc</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Plant</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y font-poppins capitalize">

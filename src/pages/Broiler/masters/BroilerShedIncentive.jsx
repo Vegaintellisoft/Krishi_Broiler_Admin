@@ -65,6 +65,16 @@ const BroilerShedIncentive = () => {
     const goToNextPage = () => setCurrentPage((prev) => Math.min(prev + 1, totalPages));
     const goToPreviousPage = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
 
+    const formatDate = (dateString) => {
+     const date = new Date(dateString);
+
+     const day = String(date.getDate()).padStart(2, '0');
+     const month = String(date.getMonth() + 1).padStart(2, '0'); 
+     const year = date.getFullYear();
+
+     return `${day}-${month}-${year}`;
+   };
+
     return (
         <div className="rounded-lg shadow flex-1">
             <div className="bg-[#F9F9FC] h-screen relative">
@@ -126,11 +136,11 @@ const BroilerShedIncentive = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">Werks</th>
-                                <th className="p-4 text-center text-sm text-black">begda</th>
-                                <th className="p-4 text-center text-sm text-black">endda</th>
-                                <th className="p-4 text-center text-sm text-black">shedInc</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Plant</th>
+                                <th className="p-4 text-center text-sm text-black">Start Date</th>
+                                <th className="p-4 text-center text-sm text-black">End Date</th>
+                                <th className="p-4 text-center text-sm text-black">Shed Incentive</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y font-poppins capitalize">
@@ -140,8 +150,8 @@ const BroilerShedIncentive = () => {
                                         <td className="p-4 text-sm opacity-65">{index + startIndex + 1}</td>
                                         <td className="p-4 text-sm opacity-65">{item.mandt}</td>
                                         <td className="p-4 text-sm opacity-65">{item.werks}</td>
-                                        <td className="p-4 text-sm opacity-65"> {item.begda} </td>
-                                        <td className="p-4 text-sm opacity-65"> {item.endda} </td>
+                                        <td className="p-4 text-sm opacity-65"> {formatDate(item.begda)} </td>
+                                        <td className="p-4 text-sm opacity-65"> {formatDate(item.endda)} </td>
                                         <td className="p-4 text-sm opacity-65"> {item.shedInc} </td>
                                     </tr>
                                 ))

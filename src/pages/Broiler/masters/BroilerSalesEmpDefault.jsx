@@ -69,13 +69,13 @@ const BroilerSalesEmpDefault = () => {
         <div className="rounded-lg shadow flex-1">
             <div className="bg-[#F9F9FC] h-screen relative">
                 <div className="space-y-4 pt-3 px-6 font-poppins">
-                    <h1 className="text-xl font-bold text-gray-900">Broiler Sales Rate</h1>
+                    <h1 className="text-xl font-bold text-gray-900">Broiler Sales EMP Default</h1>
                     <div className="flex items-center gap-x-2 text-sm text-gray-500">
                         <Link to="/" className="text-orange-500">
                             Masters
                         </Link>
                         <RiArrowUpSFill className="rotate-90" size={20} />
-                        <span>Broiler Sales Rate</span>
+                        <span>Broiler Sales EMP Default</span>
                     </div>
 
                     <div className="flex items-center justify-between">
@@ -126,10 +126,10 @@ const BroilerSalesEmpDefault = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">Werks</th>
-                                <th className="p-4 text-center text-sm text-black">zzorderBy</th>
-                                <th className="p-4 text-center text-sm text-black">zzdispBy</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Plant</th>
+                                <th className="p-4 text-center text-sm text-black">Order By</th>
+                                <th className="p-4 text-center text-sm text-black">Dispatched By</th>
 
                             </tr>
                         </thead>

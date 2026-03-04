@@ -126,11 +126,11 @@ const HetcheryMachine = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">zzbroMac</th>
-                                <th className="p-4 text-center text-sm text-black">zzbroMacN</th>
-                                <th className="p-4 text-center text-sm text-black">zzcapacity</th>
-                                <th className="p-4 text-center text-sm text-black">zsetQty</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Machine Code</th>
+                                <th className="p-4 text-center text-sm text-black">Machine Name</th>
+                                <th className="p-4 text-center text-sm text-black">Capacity</th>
+                                <th className="p-4 text-center text-sm text-black">Available Capacity</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y font-poppins capitalize">

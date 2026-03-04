@@ -46,6 +46,7 @@ const MortalityIncentive = () => {
     const filteredData = data.filter(
         (item) =>
             item.mandt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            item.werks.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.zzfrmoFcr.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.zztoFcr.toLowerCase().includes(searchQuery.toLowerCase()) ||
             item.amount.toLowerCase().includes(searchQuery.toLowerCase())
@@ -125,10 +126,10 @@ const MortalityIncentive = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">zzfrmoFcr</th>
-                                <th className="p-4 text-center text-sm text-black">zztoFcr</th>
-                                <th className="p-4 text-center text-sm text-black">amount</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in Document Currency</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in Document Currency</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in Document Currency</th>
                                 {/* Removed: Actions column header */}
                             </tr>
                         </thead>

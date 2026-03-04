@@ -28,6 +28,7 @@ const BroilerSidebar = () => {
     const [dataEntryExpanded, setDataEntryExpanded] = useState(false);
     const [feedExpanded, setFeedExpanded] = useState(false);
     const [adminExpanded, setAdminExpanded] = useState(false);
+    const [usersExpanded, setUsersExpanded] = useState(false);
     const [onSelect, setOnSelect] = useState(location.pathname);
 
     // Masters Menu Items
@@ -53,7 +54,7 @@ const BroilerSidebar = () => {
         { path: "/broilerShedIncentive", label: "Broiler Shed Incentive Details", show: broilerShedIncentive?.show },
         { path: "/mortalityIncenPlant", label: "Mortality Incentive Plant", show: mortalityIncenPlant?.show },
         { path: "/mortalityDeducPlant", label: "Mortality Deduction Plant", show: mortalityDeducPlant?.show },
-        { path: "/mortalityDeducPlant1", label: "Mortality Deduction Plant-1", show: mortalityDeducPlant1?.show },
+        //{ path: "/mortalityDeducPlant1", label: "Mortality Deduction Plant-1", show: mortalityDeducPlant1?.show },
         { path: "/mortalityDeducMainPlant", label: "Mortality Deduction Maintain Plant", show: mortalityDeducMainPlant?.show },
         { path: "/earnedRcMaster2", label: "Earned RC Master-2", show: earnedRcMaster2?.show },
         { path: "/earnedRcMaster3", label: "Earned RC Master-3", show: earnedRcMaster3?.show },
@@ -74,11 +75,17 @@ const BroilerSidebar = () => {
         { path: "/FeedApproval", label: "Feed Approval", show: feedApproval?.show },
     ];
 
+    const BroilerUserItems = [
+        { path: "/broilerUser", label: "User", show: broilerUsers?.show },
+        { path: "/broilerActivity", label: "Activity Log", show: broilerUsers?.show }
+    ];
+
 
 
     const mastersVisibleItems = mastersMenuItems.filter(item => item.show);
     const dataEntryVisibleItems = dataEntryMenuItems.filter(item => item.show);
     const feedVisibleItems = feedMenuItems.filter(item => item.show);
+    const BroilerVisibleItems = BroilerUserItems.filter(item => item.show);
 
     useEffect(() => {
         setOnSelect(location.pathname);
@@ -87,6 +94,7 @@ const BroilerSidebar = () => {
         if (mastersMenuItems.some(item => item.path === location.pathname)) setMenuExpanded(true);
         if (dataEntryMenuItems.some(item => item.path === location.pathname)) setDataEntryExpanded(true);
         if (feedVisibleItems.some(item => item.path === location.pathname)) setFeedExpanded(true);
+        if (BroilerVisibleItems.some(item => item.path === location.pathname)) setUsersExpanded(true);
 
     }, [location.pathname]);
 
@@ -228,18 +236,42 @@ const BroilerSidebar = () => {
                     </div>
                 )}
 
-                {/* Users */}
-                {broilerUsers?.show && (
-                    <Link
-                        to="/broilerUser"
-                        className={`flex px-5 py-3 gap-2 items-center justify-start text-sm
-                            ${onSelect === "/broilerUser" ? 'text-[#F3890A] bg-[#F9E6D3] border-l-4 border-[#F3890A]' : 'text-[#4A4C56] '}`}
-                    >
-                        <FaUsers size={18} />
-                        <span>Users</span>
-                    </Link>
-                )}
+                {/* Broiler Dropdown */}
+                {BroilerVisibleItems.length > 0 && (
+                    <div className={`${BroilerUserItems.some(item => item.path === onSelect) ? 'text-[#F3890A] bg-[#F9E6D3] border-l-4 border-[#F3890A]' : 'text-[#4A4C56]'}`}>
+                        <button
+                            onClick={() => {
+                                setUsersExpanded(!usersExpanded);
+                                setMenuExpanded(false);
+                                setDataEntryExpanded(false);
+                                setFeedExpanded(false);
+                                setAdminExpanded(false);
+                            }}
+                            className={`w-full flex items-center justify-between px-2 ${BroilerUserItems.some(item => item.path === onSelect) ? 'text-[#F3890A] bg-[#F9E6D3]' : 'text-[#4A4C56]'}`}
+                        >
+                            <span className="flex justify-between w-full h-10 items-center gap-2 px-3 py-3">
+                                <div className='flex gap-2 items-center justify-start'>
+                                    <FaUsers size={18} />
+                                    <span className='text-sm'>Users</span>
+                                </div>
+                                <RiArrowUpSFill className={`${usersExpanded ? "" : "rotate-180"}`} size={20} />
+                            </span>
+                        </button>
 
+                        {usersExpanded && (
+                            <div className="ml-10 space-y-1">
+                                {BroilerVisibleItems.map(({ path, label }) => (
+                                    <div key={path} className="flex items-center">
+                                        <span className={`min-w-2.5 min-h-2.5 rounded-full ${onSelect === path ? 'bg-orange-500' : 'bg-white border border-slate-400'}`}></span>
+                                        <Link to={path} className={`block p-2 rounded-lg text-sm ${onSelect === path ? 'text-[#F3890A] bg-[#F9E6D3]' : 'text-[#4A4C56]'}`}>
+                                            {label}
+                                        </Link>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                )}
 
                 {/* Admin Dropdown */}
                 {adminPage?.show && (adminPage.showModerators || adminPage.showRoles) && (

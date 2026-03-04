@@ -23,7 +23,7 @@ const MortalityReason = () => {
     const fetchMaster = async () => {
         setIsLoading(true);
         try {
-            const { data } = await axios.get("broiler/master/mortality-reason");
+            const { data } = await axios.get("broiler/master/getAll/broiler_mortality_reason");
             setData(data.data || []);
         } catch (error) {
             console.error("Error fetching mortality reason:", error);
@@ -114,9 +114,9 @@ const MortalityReason = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">rsCode</th>
-                                <th className="p-4 text-center text-sm text-black">rsTxt</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">Reason Code</th>
+                                <th className="p-4 text-center text-sm text-black">Reason Description</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y font-poppins capitalize">

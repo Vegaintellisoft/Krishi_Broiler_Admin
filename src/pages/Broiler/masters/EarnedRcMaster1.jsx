@@ -22,7 +22,7 @@ const EarnedRcMaster1 = () => {
     const fetchMaster = async () => {
         setIsLoading(true);
         try {
-            const { data } = await axios.get("broiler/master/earned-rc1");
+            const { data } = await axios.get("broiler/master/getAll/earned_rc_master1");
             setData(data.data || []);
         } catch (error) {
             console.error("Error fetching Earned RC Master-1:", error);
@@ -113,10 +113,10 @@ const EarnedRcMaster1 = () => {
                         <thead className="font-poppins font-semibold">
                             <tr className="border-b">
                                 <th className="p-4 text-center text-sm text-black">S.No</th>
-                                <th className="p-4 text-center text-sm text-black">Mandt</th>
-                                <th className="p-4 text-center text-sm text-black">zsel</th>
-                                <th className="p-4 text-center text-sm text-black">zerc</th>
-                                <th className="p-4 text-center text-sm text-black">znewGc</th>
+                                <th className="p-4 text-center text-sm text-black">Client</th>
+                                <th className="p-4 text-center text-sm text-black">DB Field Name</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in Document Currency</th>
+                                <th className="p-4 text-center text-sm text-black">Amount in Document Currency</th>
                             </tr>
                         </thead>
                         <tbody className="divide-y font-poppins capitalize">
