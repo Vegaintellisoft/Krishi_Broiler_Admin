@@ -30,6 +30,7 @@ import EggCodeList from "../pages/Broiler/masters/EggCodeList";
 import BroilerSalesRate from "../pages/Broiler/masters/BroilerSalesRate";
 import BroilerSalesEmpDefault from "../pages/Broiler/masters/BroilerSalesEmpDefault";
 import BroilerUsers from "../pages/Broiler/BroilerUsers";
+import ActivityLog from "../pages/Broiler/ActivityLog";
 import FarmActivities from "../pages/Broiler/DataEntry/FarmActivity/FarmActivities";
 import ShedReady from "../pages/Broiler/DataEntry/ShedReady";
 import IssuedMedicine from "../pages/Broiler/DataEntry/IssuedMedicine";
@@ -80,7 +81,7 @@ const BroilerLayout = () => {
 
 
             <Route path='/broilerUser' element={<BroilerUsers />} />
-
+            <Route path='/broilerActivity' element={<ActivityLog />} />
             {/* Data Entry */}
             <Route path='/FarmActivity' element={<FarmActivities />} />
             <Route path='/ShedReadiness' element={<ShedReady />} />
